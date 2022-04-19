@@ -1,0 +1,9 @@
+/*global*/
+
+/*header*/
+header.site-header{
+    display: flex;
+    justify-content: space-between;
+    height: 40vh;
+    
+}

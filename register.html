@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+    <link rel="stylesheet" href="css/main.css">
+    <title>The Fashion Pet</title>
+</head>
+<body>
+    <header>
+        <h1>The Fashion Pet</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="register.html">Register</a>
+            
+        </nav>
+    </header>
+    <main>
+        <div class="form-container">
+            <h3>Register a new pet</h3>
+            <div>
+            <input class="form-control" type="text" id="txtname" placeholder="Enter the name"></input>
+            </div>
+            <div>
+                <input type="text"id="txtage" placeholder="Enter the age">
+            </input>
+            </div>
+            <div class="form-control"><input type="text" id="txtgender" placeholder="Enter the gender">
+            </input>
+            </div>
+            <divclass="form-control">
+                <input type= "text" id="txtbreed" placeholder="Enter the Breed"></input>
+            </div>
+            <div>
+                <select class="form-control" name="Grooming" id="Grooming">
+                    <option value="Nails">Nails</option>
+                    <option value="Hair">Hair</option>
+                </select>
+            </div>
+            <div>
+                <input class="form-control" type="text" id="txtowname" placehodler="Enter the Owner's name"></input>
+            </div>
+            <input class="form-control" type="text" id= "txtphone" placeholder="Enter the Contact Phone"></input>
+        </div>
+        <button onclick="Go"> Register</button>
+
+        <div id="pets">
+        <!--display the names of the pets using <li> tag-->
+            <ul>
+                <li> Scooby</li>
+                <li> Scrappy</li>
+                <li> Test</li>
+                <li> Max</li>
+            </ul>
+        </div>
+    </main>
+    <footer>
+        <div id="petsSalon">
+
+        </div>
+        <!--display salon details in this section-->
+    </footer>
+    <script src="scripts/register.js"></script>
+
+</body>
+</html>
