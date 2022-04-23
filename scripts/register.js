@@ -8,53 +8,10 @@ let petsSalon = {
         hours: {
             open:"9:00 a.m.",
             close: "8:00 pm."
-        }
+        },   
+     pets: []
+        
 }
-console.log(petsSalon);
-
-    let pets= [
-            {
-            name:"Scooby",
-            age: 50,
-            breed: "Dane",
-            gender: "Male",
-            service: "Grooming",
-            ownerinfo:{
-                ownersname: "Shaggy",
-                phone: 555-555-555},
-            },
-            {
-            name:"Scappy",
-            age: 40,
-            breed: "Mixed",
-            gender: "Male",
-            service: "Grooming",
-            ownerinfo:{
-                ownersname: "Shaggy",
-                phone: 555-555-555},  
-            },
-            {
-                name:"Test",
-                age: 99,
-                breed: "Test",
-                gender: "Test",
-                service: "Test",
-                ownerinfo:{
-                    ownersname: "Test",
-                    phone: 555-555-555}, 
-            },
-            {
-                name:"Max",
-                age: 56,
-                breed: "Husky",
-                gender: "Male",
-                service: "Grooming",
-                ownerinfo:{
-                    ownersname: "Train",
-                    phone: 555-555-555},
-            }
-        ];
-
 function dispalyPetsNames(){
     let tmp="";
     for(let i=0;i<pets.length;i++){
@@ -69,34 +26,67 @@ function dispalyPetsNames(){
 }
 
 
-//displaypets();
+ function displayCards(){
 
-//function pet(Name,age,breed,service,ownername,contactphone){
-    //this.name=Name;
-    //this.age=age;
-    //this.breed=breed;
-    //this.service=service;
-    //this.ownername=ownername;
-    //this.contactphone=contactphone
-//}
-//let inputName=document.getElementById("txtname");
-//let inputAge=document.getElementById("txtage");
-//let inputBreed=document.getElementById("txtbreed");
-//let inputService=document.getElementById("Grooming");
-//let inputownname=document.getElementById("txttownname");
-//let inputContactphone=document.getElementById("txtphone")
+function Pet(Name,age,breed,gender, service,ownername,contactphone){
+    this.name=Name;
+    this.age=age;
+    this.gender=gender;
+    this.breed=breed;
+    this.service=service;
+    this.owner=ownername;
+    this.phone=contactphone;
+}
+let inputName=document.getElementById("txtname");
+let inputAge=document.getElementById("txtage");
+let inputGender=document.getElementById("txtgender");
+let inputBreed=document.getElementById("txtbreed");
+let inputService=document.getElementById("selService");
+let inputOwner=document.getElementById("txtownname");
+let inputphone=document.getElementById("txtphone");
 
-//function register(){
-//let ThePet = new(inputName.value, inputAge.//value, inputBreed.value, inputService.value, //inputownname.value)
+function isValid(aPet){
+    //return false when the pet is not valid
+    //return true if the pet is valid
+    let valid=true;
+    if(aPet.petName.length==0){
+        //if we get here it means that the name is not valid
+        valid=false;
+        console.log("Invalid name");
+    }
+        if (aPet.service.length==0){
+            valid=false;
+            console.error("Invalid name");
+        }
+        if (aPet.phone.length==0){
+            valid=false;
+            console.error("Invalid name");
+        }
+       return valid;
+}
 
-//}
+function register(){
+let thePet = new Pet(inputName.value, inputAge.value, inputBreed.value, inputGender.value, inputService.value, inputOwner.value,inputphone.value);
+console.log(thePet);
+petsSalon.pets.push(thePet);
+if (isValid(thePet)==true){
+    petsSalon.pets.push(thePet);
+}
+}
+clearInputs();}
+
+function clearInputs(){
+    inputName.value="";
+    inputAge.value="";
+    inputBreed.value="";
+    inputGender.value="";
+    inputService.value="";
+    inputOwner.value="";
+    inputphone.value="";
+}
 
 
-//let scooby=new pet("Scooby",50,"Dane","Male",//"Grooming","Shaggy", 555-555-555,);
-
-//let scrappy =new pet("Scrappy", 50, "Mixed", //"Grooming", "Shaggy", 555-555-555);
-
-//let max=new pet("Max", 56, "Husky", //"Grooming","Shaggy", 555-555-555);
-
-//console.log(scooby,scrappy,max);
-
+let scooby=new Pet("Scooby",50,"Dane","Male","Grooming","Shaggy", 555-555-555,);
+let scrappy =new Pet("Scrappy", 50, "Mixed", "Grooming", "Shaggy", 555-555-555);
+let max=new Pet("Max", 56, "Husky", "Grooming","Shaggy", 555-555-555);
+petsSalon.push(scooby,scrappy);
