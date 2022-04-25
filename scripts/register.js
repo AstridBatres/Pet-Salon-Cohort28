@@ -58,7 +58,7 @@ let thePet = new Pet(inputName.value, inputAge.value, inputBreed.value, inputGen
 console.log(thePet);
 if (isValid(thePet)){
     petsSalon.pets.push(thePet);
-    displayCards();
+    displaytable();
     clearInputs();}
 }
 
@@ -113,4 +113,4 @@ let scooby=new Pet("Scooby",50,"Dane","Male","Grooming","Shaggy", 555-555-5555);
 let scrappy =new Pet("Scrappy", 50, "Mixed","Male", "Grooming", "Shaggy", 555-555-5555);
 let max=new Pet("Max", 56, "Husky", "Male","Grooming","Shaggy", 555-555-5555);
 petsSalon.pets.push(scooby,scrappy);
-displayCards();
+displaytable();

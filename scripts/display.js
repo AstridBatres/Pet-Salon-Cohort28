@@ -32,3 +32,23 @@ function displayCards(){
         document.getElementById("pets").innerHTML=tmp
     }
 }
+
+function displaytable(){
+    let tmp="";
+    for(let i=0;i<petsSalon.pets.length;i++){
+        let pet = petsSalon.pets[i];
+        tmp+=`
+    <table>    
+    <tr>
+        <td>${pet.name}</td>
+        <td>${pet.age}</td>
+        <td>${pet.breed}</td>
+        <td>${pet.gender}</td>
+        <td>${pet.service}</td>
+        <td>${pet.owner}</td>
+        <td>${pet.phone}</td>
+    </tr>
+    </table>`;
+}
+document.getElementById("pets").innerHTML=tmp;
+    }
